@@ -1,0 +1,123 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --purple: #8b5cf6;
+    --light-purple: #a78bfa;
+    --pink: #ec4899;
+    --light-pink: #f472b6;
+    --blue: #3b82f6;
+    --cyan: #06b6d4;
+    --dark: #111827;
+    --dark-purple: #1e1b4b;
+    --text: #334155;
+    --muted: #64748b;
+    --white: #ffffff;
+    --background: #faf9ff;
+
+    --gradient: linear-gradient(135deg, #8b5cf6, #ec4899, #3b82f6);
+    --gradient-blue: linear-gradient(135deg, #06b6d4, #3b82f6, #8b5cf6);
+    --shadow: 0 15px 45px rgba(79, 70, 229, 0.12);
+    --shadow-hover: 0 25px 60px rgba(79, 70, 229, 0.22);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1150px, calc(100% - 30px));
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    z-index: 1000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 16px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+}
+
+.logo span,
+.footer-logo span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #e2e8f0;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    transform: translateX(-50%);
+    background: var(--gradient);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 150px 20px 80px;
+    position: relative;
+    overflow:
